@@ -1,6 +1,6 @@
 name=New Music Radio B42
 poster=poster.png
 id=NewMusicRadio
-description=Adds radio channels that play music from Talis New Music mod. Based on True Music Radio.
+description=[EARLY ACCESS - IN DEVELOPMENT] Adaptation of True Music Radio for Talis New Music. Adds radio channels that play music from New Music mod. May present instability. GitHub: https://github.com/KleitonEwerton/New-Music-Radio-B42
 versionMin=42.13
 require=NewMusic

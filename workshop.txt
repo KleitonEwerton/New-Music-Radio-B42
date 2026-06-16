@@ -1,8 +1,27 @@
 version=1
 id=3746101672
 title=New Music Radio B42
-description=Radio channels for Talis New Music. Play New Music tracks on in-game radios!
+description=[b]⚠️ EARLY ACCESS - IN DEVELOPMENT ⚠️[/b]
+description=This mod may present instability. Please report issues on GitHub.
 description=
-description=Requires: Talis New Music
+description=[b]Description:[/b]
+description=Adds radio channels that play music from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3739256725]Talis New Music[/url] on in-game radios and TVs.
+description=This is an adaptation of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3100475013]True Music Radio[/url] for the New Music system.
+description=
+description=[b]Features:[/b]
+description=- 5 FM radio channels (93.0 - 93.8 FM)
+description=- 1 MTV TV channel (Channel 212)
+description=- Weather broadcasts & song announcements
+description=- Configurable via Sandbox Options
+description=
+description=[b]Requirements:[/b]
+description=- [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3739256725]Talis New Music[/url]
+description=
+description=[b]Links:[/b]
+description=GitHub: https://github.com/KleitonEwerton/New-Music-Radio-B42
+description=
+description=[b]Credits:[/b]
+description=Based on True Music Radio by its original author.
+description=Adapted for Talis New Music compatibility.
 tags=Build 42;Audio;Building;Misc;Pop Culture;Realistic
-visibility=private
+visibility=public
