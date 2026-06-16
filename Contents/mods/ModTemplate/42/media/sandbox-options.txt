@@ -1,0 +1,156 @@
+VERSION = 1,
+
+option NewMusicRadio.NMRRadiosAttractZombies
+{
+	type = boolean,
+	default = FALSE,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRRadiosAttractZombies,
+}
+
+option NewMusicRadio.NMRTerminalEjectsMusic
+{
+	type = boolean,
+	default = TRUE,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRTerminalEjectsMusic,
+}
+
+option NewMusicRadio.NMRMusicTerminalFilledAmount
+{
+	type = enum,
+	numValues = 6,
+	default = 5,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRMusicTerminalFilledAmount,
+	valueTranslation = NewMusicRadio_NMRMusicTerminalFilledAmount,
+}
+
+option NewMusicRadio.NMRRadioWeatherBroadcast
+{
+	type = boolean,
+	default = TRUE,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRRadioWeatherBroadcast,
+}
+
+option NewMusicRadio.NMRRadioSongAnnouncements
+{
+	type = boolean,
+	default = TRUE,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRRadioSongAnnouncements,
+}
+
+option NewMusicRadio.NMRRadioHordeNightBroadcast
+{
+	type = boolean,
+	default = TRUE,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRRadioHordeNightBroadcast,
+}
+
+option NewMusicRadio.NMRRadioMoods
+{
+	type = boolean,
+	default = TRUE,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRRadioMoods,
+}
+
+option NewMusicRadio.NMRChannel1
+{
+	type = integer,
+	min = 88000,
+	max = 108000,
+	default = 93000,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRChannel1,
+	valueTranslation = NewMusicRadio_NMRChannel1,
+}
+
+option NewMusicRadio.NMRChannel2
+{
+	type = integer,
+	min = 88000,
+	max = 108000,
+	default = 93200,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRChannel2,
+	valueTranslation = NewMusicRadio_NMRChannel2,
+}
+
+option NewMusicRadio.NMRChannel3
+{
+	type = integer,
+	min = 88000,
+	max = 108000,
+	default = 93400,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRChannel3,
+	valueTranslation = NewMusicRadio_NMRChannel3,
+}
+
+option NewMusicRadio.NMRChannel4
+{
+	type = integer,
+	min = 88000,
+	max = 108000,
+	default = 93600,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRChannel4,
+	valueTranslation = NewMusicRadio_NMRChannel4,
+}
+
+option NewMusicRadio.NMRChannel5
+{
+	type = integer,
+	min = 88000,
+	max = 108000,
+	default = 93800,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRChannel5,
+	valueTranslation = NewMusicRadio_NMRChannel5,
+}
+
+option NewMusicRadio.ActivateNMRMTV
+{
+	type = boolean,
+	default = TRUE,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_ActivateNMRMTV,
+}
+
+option NewMusicRadio.NMRMTV
+{
+	type = integer,
+	min = 200,
+	max = 220,
+	default = 212,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRMTV,
+	valueTranslation = NewMusicRadio_NMRMTV,
+}
+
+option NewMusicRadio.NMRAllowSkipOnServer
+{
+	type = boolean,
+	default = FALSE,
+
+	page = NewMusicRadio,
+	translation = NewMusicRadio_NMRAllowSkipOnServer,
+}

@@ -1,0 +1,8 @@
+version=1
+id=3746101672
+title=New Music Radio B42
+description=Radio channels for Talis New Music. Play New Music tracks on in-game radios!
+description=
+description=Requires: Talis New Music
+tags=Build 42;Audio;Building;Misc;Pop Culture;Realistic
+visibility=private

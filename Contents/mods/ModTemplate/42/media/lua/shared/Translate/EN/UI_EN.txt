@@ -1,0 +1,36 @@
+UI_EN = {
+
+	UI_options_NewMusicRadio_TMRmuteMusic = "Mute All New Music Radios",
+	UI_options_NewMusicRadio_TMRmuteMusic_tooltip = "Enable this option to mute all New Music Radio songs in the game.",
+
+	UI_options_NewMusicRadio_TMRstopMusic = "Stop Playing All New Music Radios",
+	UI_options_NewMusicRadio_TMRstopMusic_tooltip = "Enable this option to stop all New Music Radio music from playing in the game. It removes the stutter but disconnects the sync with music on the server.",
+
+	UI_options_NewMusicRadio_TMRenableRDS = "Enable RDS On New Music Radio Stations",
+	UI_options_NewMusicRadio_TMRenableRDS_tooltip = "Enable this option to activate the Radio Data System for music information on New Music Radio stations.",
+
+	UI_options_NewMusicRadio_TMRenableRDSDeviceText = "Enable Song Announcement On New Music Radio Stations",
+	UI_options_NewMusicRadio_TMRenableRDSDeviceText_tooltip = "Enable this option to activate song announcements on New Music Radio stations. (Only deactivates announcements in single player games.)",
+
+	UI_options_NewMusicRadio_TMRthreeDoff = "Disable All New Music Radio 3D Audio",
+	UI_options_NewMusicRadio_TMRthreeDoff_tooltip = "This option forces all New Music Radios to lose 3D audio.",
+
+	UI_options_NewMusicRadio_TMRaltThreeD = "Enable Alternate Stereo 3D Audio For New Music Radio (Experimental)",
+	UI_options_NewMusicRadio_TMRaltThreeD_tooltip = "This experimental option creates a simulated 3D audio in stereo for New Music Radio when standard 3D audio is disabled.",
+
+	UI_options_NewMusicRadio_TMRterminalEject = "Enable The Eject Media System In Terminals (will cause a lag spike on terminals)",
+	UI_options_NewMusicRadio_TMRterminalEject_tooltip = "This will enable the eject media system in the terminals setup for music stations but with large music lists can cause lag pulling the song list.",
+
+	UI_options_NewMusicRadio_TMRterminalBlacklist = "Enable The Blacklist System In Terminals (will cause a lag spike on terminals)",
+	UI_options_NewMusicRadio_TMRterminalBlacklist_tooltip = "This will enable the blacklist system in the terminals setup for music stations but with large music lists can cause lag pulling the song list.",
+
+	UI_options_NewMusicRadio_TMRvolumeSlider = "Adjust New Music Radio Volume",
+	UI_options_NewMusicRadio_TMRvolumeSlider_tooltip = "This will adjust the play volume of the music from radios beyond the radio volume bar.",
+
+	UI_NewMusicRadio_update = "Update radio playlist from terminal library",
+	UI_NewMusicRadio_revert = "Revert the radio playlist back to the entire True Music library",
+	UI_NewMusicRadio_ejectmedia = "Eject music from terminal library:",
+	UI_NewMusicRadio_sayaccessblocked = "I am unable to access this Terminal, the path is blocked.",
+	UI_NewMusicRadio_sayneedsgenerator = "I will need a generator nearby to power it."
+
+}
