@@ -1,0 +1,54 @@
+{
+	"Sandbox_NewMusicRadio": "New Music Radio",
+
+	"Sandbox_NewMusicRadio_NMRRadiosAttractZombies": "Enable New Music Radios To Attract Zombies",
+	"Sandbox_NewMusicRadio_NMRRadiosAttractZombies_tooltip": "Enabling this will increase the possibility of zombies being attracted to New Music Radio music. (Does not affect vanilla radio attraction.)",
+
+	"Sandbox_NewMusicRadio_NMRTerminalEjectsMusic": "Enable The New Music Radio Station Terminal To Eject Additional Music",
+	"Sandbox_NewMusicRadio_NMRTerminalEjectsMusic_tooltip": "Enabling this will allow the west station terminal to eject additional media. (Amounts based on filled amount settings)",
+
+	"Sandbox_NewMusicRadio_NMRMusicTerminalFilledAmount": "How Much Music Spawns In The New Music Radio Station Terminals",
+	"Sandbox_NewMusicRadio_NMRMusicTerminalFilledAmount_tooltip": "How much music media spawns in the station terminals.",
+	"Sandbox_NewMusicRadio_NMRMusicTerminalFilledAmount_option1": "Very Low",
+	"Sandbox_NewMusicRadio_NMRMusicTerminalFilledAmount_option2": "Low",
+	"Sandbox_NewMusicRadio_NMRMusicTerminalFilledAmount_option3": "Medium",
+	"Sandbox_NewMusicRadio_NMRMusicTerminalFilledAmount_option4": "High",
+	"Sandbox_NewMusicRadio_NMRMusicTerminalFilledAmount_option5": "Random",
+	"Sandbox_NewMusicRadio_NMRMusicTerminalFilledAmount_option6": "None",
+
+	"Sandbox_NewMusicRadio_NMRRadioWeatherBroadcast": "Enable New Music Radio Stations Weather Broadcasts",
+	"Sandbox_NewMusicRadio_NMRRadioWeatherBroadcast_tooltip": "Enabling this will add weather broadcasting on the hour.",
+
+	"Sandbox_NewMusicRadio_NMRRadioSongAnnouncements": "Enable New Music Radio Stations Song Announcements",
+	"Sandbox_NewMusicRadio_NMRRadioSongAnnouncements_tooltip": "Enabling this will add song announcements when new songs start.",
+
+	"Sandbox_NewMusicRadio_NMRRadioHordeNightBroadcast": "Enable New Music Radio Stations Horde Night Announcements",
+	"Sandbox_NewMusicRadio_NMRRadioHordeNightBroadcast_tooltip": "Enabling this will add warning announcements when Horde Night starts. (Only if the Horde Night mod is enabled)",
+
+	"Sandbox_NewMusicRadio_NMRRadioMoods": "Enable New Music Radio Mood Bonuses",
+	"Sandbox_NewMusicRadio_NMRRadioMoods_tooltip": "Enabling this will give the player a bonus to happiness and boredom when music is played nearby.",
+
+	"Sandbox_NewMusicRadio_NMRChannel1": "New Music Radio Station 1 Frequency",
+	"Sandbox_NewMusicRadio_NMRChannel1_tooltip": "The frequency for the 1st New Music Radio station. (Default 93FM = 93000)",
+
+	"Sandbox_NewMusicRadio_NMRChannel2": "New Music Radio Station 2 Frequency",
+	"Sandbox_NewMusicRadio_NMRChannel2_tooltip": "The frequency for the 2nd New Music Radio station. (Default 93.2FM = 93200)",
+
+	"Sandbox_NewMusicRadio_NMRChannel3": "New Music Radio Station 3 Frequency",
+	"Sandbox_NewMusicRadio_NMRChannel3_tooltip": "The frequency for the 3rd New Music Radio station. (Default 93.4FM = 93400)",
+
+	"Sandbox_NewMusicRadio_NMRChannel4": "New Music Radio Station 4 Frequency",
+	"Sandbox_NewMusicRadio_NMRChannel4_tooltip": "The frequency for the 4th New Music Radio station. (Default 93.6FM = 93600)",
+
+	"Sandbox_NewMusicRadio_NMRChannel5": "New Music Radio Station 5 Frequency",
+	"Sandbox_NewMusicRadio_NMRChannel5_tooltip": "The frequency for the 5th New Music Radio station. (Default 93.8FM = 93800)",
+
+	"Sandbox_NewMusicRadio_ActivateNMRMTV": "Enable New Music MTV Channel",
+	"Sandbox_NewMusicRadio_ActivateNMRMTV_tooltip": "Enabling this will allow the creation of the New Music MTV channel. (Optional as it can interfere with some other TV Channel mods.)",
+
+	"Sandbox_NewMusicRadio_NMRMTV": "New Music MTV Channel",
+	"Sandbox_NewMusicRadio_NMRMTV_tooltip": "The channel for the New Music MTV Station. (Default: 212)",
+
+	"Sandbox_NewMusicRadio_NMRAllowSkipOnServer": "Allow Skip On Server",
+	"Sandbox_NewMusicRadio_NMRAllowSkipOnServer_tooltip": "Enabling this will allow players to skip a song on the radio by clicking the tune in button like in single player. (not suggested in case of players spamming the server, admins can already do this)"
+}
