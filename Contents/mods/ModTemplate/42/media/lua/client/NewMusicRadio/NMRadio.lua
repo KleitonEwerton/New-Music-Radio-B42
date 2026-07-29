@@ -349,8 +349,38 @@ NMRadio.PlaySound = function(number, device)
 		print("NMRadio: Error processing requested song")
 		return
 	else
-		local musicItem = "NewMusic." .. songName
-		local displayName = getItemNameFromFullType(musicItem)
+		-- Resolve the actual sound name via NMTrackCatalog/NMMusic
+		local resolvedSound = songName
+		local displayKey = songName
+		local dotPos = string.find(songName, ".", 1, true)
+		if dotPos then
+			displayKey = songName  -- already has module prefix
+		else
+			displayKey = "NewMusic." .. songName  -- legacy key, add module prefix
+		end
+
+		-- Try to resolve tracks from NMTrackCatalog first
+		if NMMusic and NMMusic.resolveTracks then
+			local resolved = NMMusic.resolveTracks(displayKey)
+			if not resolved and dotPos then
+				-- Try without module prefix as fallback
+				resolved = NMMusic.resolveTracks(songName)
+			end
+			if resolved and resolved.tracks and #resolved.tracks > 0 then
+				-- Pick a random track from the resolved entry
+				local trackIndex = ZombRand(1, #resolved.tracks + 1)
+				resolvedSound = resolved.tracks[trackIndex].sound
+				if resolved.tracks[trackIndex].label then
+					displayKey = resolved.tracks[trackIndex].label
+				end
+			end
+		end
+
+		local displayName = getItemNameFromFullType(displayKey)
+		if displayName == displayKey then
+			-- getItemNameFromFullType didn't resolve it, use raw label
+			displayName = displayKey
+		end
 		local prettyName = NMRadio.prettyName(displayName)
 		if deviceData:getChannel() > 1000 then
 			print("NMRadio Channel " .. deviceData:getChannel()/1000 .. "FM: Playing song[" .. number .. "] " .. prettyName)
@@ -361,7 +391,7 @@ NMRadio.PlaySound = function(number, device)
 			DynamicRadio.OnNewSong(deviceData:getChannel(), prettyName)
 		end
 		if not PZAPI.ModOptions:getOptions("NewMusicRadio"):getOption("NMRstopMusic"):getValue() then
-			sound:play(songName)
+			sound:play(resolvedSound)
 		end
 	end
 
@@ -1483,10 +1513,7 @@ function NMRadio.adjustSounds()
 			NMRadioClient.UpdatePlaylistFromServer()
 		else
 			NMRadio.OldPlaylistGlobal = ModData.getOrCreate("NMRadioOldPlaylistGlobal")
-			NMRadio.PlaylistGlobal = {}
-			for k,v in pairs(GlobalMusic) do
-				NMRadio.PlaylistGlobal[#NMRadio.PlaylistGlobal + 1] = k
-			end
+			NMRadio.PlaylistGlobal = NMMusic.buildUnifiedMusicKeys()
 			if #NMRadio.OldPlaylistGlobal == #NMRadio.PlaylistGlobal then
 				print("NMRadio: The current global music list matches old list. Old: " .. #NMRadio.OldPlaylistGlobal .. " New: " .. #NMRadio.PlaylistGlobal)
 				NMRadio.Channels = ModData.getOrCreate("NMRadioChannels")
@@ -2032,11 +2059,7 @@ NMRadio.ChooseSong = function(channel)
 end
 
 NMRadio.CreatePlaylist = function()
-	local tempGlobalPlaylist = {}
-
-	for k,v in pairs(GlobalMusic) do
-		tempGlobalPlaylist[#tempGlobalPlaylist + 1] = k
-	end
+	local tempGlobalPlaylist = NMMusic.buildUnifiedMusicKeys()
 
 	if SandboxVars.NewMusicRadio.NMRExcludeThemeSongs then
 		for k,v in pairs(NMRadio.BlacklistThemeSongs) do

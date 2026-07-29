@@ -70,10 +70,7 @@ UseTerminalMenu.doBuildMenu = function(player, context, worldobjects)
 						square:transmitAddObjectToSquare(Terminal, index)
 						square:transmitModdata()
 
-						local tempGlobalPlaylist = {}
-						for k,v in pairs(GlobalMusic) do
-    							tempGlobalPlaylist[#tempGlobalPlaylist + 1] = k
-						end
+						local tempGlobalPlaylist = NMMusic.buildUnifiedMusicKeys()
 
 						local maxMusic = SandboxVars.NewMusicRadio.NMRMusicTerminalFilledAmount
 
@@ -240,8 +237,13 @@ UseTerminalMenu.doBuildMenu = function(player, context, worldobjects)
 		context:addSubMenu(contextMenu2, subContext2)
 
 		local tempGlobalPlaylist = {}
-		for k,v in pairs(GlobalMusic) do
-			tempGlobalPlaylist[#tempGlobalPlaylist + 1] = "NewMusic." .. k
+		for _, k in ipairs(NMMusic.buildUnifiedMusicKeys()) do
+			local dotPos = string.find(k, ".", 1, true)
+			if dotPos then
+				tempGlobalPlaylist[#tempGlobalPlaylist + 1] = k
+			else
+				tempGlobalPlaylist[#tempGlobalPlaylist + 1] = "NewMusic." .. k
+			end
 		end
 
 		for k,v in pairs(tempGlobalPlaylist) do
@@ -338,10 +340,7 @@ UseTerminalMenu.doBuildMenu = function(player, context, worldobjects)
 			local subContext3 = ISContextMenu:getNew(subContext)
 			context:addSubMenu(contextMenu3, subContext3)
 
-			local tempGlobalPlaylistBlacklist = {}
-			for k,v in pairs(GlobalMusic) do
-				tempGlobalPlaylistBlacklist[#tempGlobalPlaylistBlacklist + 1] = k
-			end
+			local tempGlobalPlaylistBlacklist = NMMusic.buildUnifiedMusicKeys()
 
 			if SandboxVars.NewMusicRadio.NMRExcludeThemeSongs then
 				for k,v in pairs(NMRadio.BlacklistThemeSongs) do

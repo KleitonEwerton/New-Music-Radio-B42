@@ -148,11 +148,7 @@ NMRadioServer.prettyName = function(displayName)
 end
 
 NMRadioServer.CreatePlaylist = function()
-	local tempGlobalPlaylist = {}
-
-	for k,v in pairs(GlobalMusic) do
-		tempGlobalPlaylist[#tempGlobalPlaylist + 1] = k
-	end
+	local tempGlobalPlaylist = NMMusic.buildUnifiedMusicKeys()
 
 	if SandboxVars.NewMusicRadio.NMRExcludeThemeSongs then
 		for k,v in pairs(NMRadioServer.BlacklistThemeSongs) do
@@ -618,10 +614,7 @@ Events.OnReceiveGlobalModData.Add(NMRadioServer.OnReceiveGlobalModData)
 
 NMRadioServer.OnServerStarted = function() 
 	NMRadioServer.OldPlaylistGlobal = ModData.getOrCreate("NMRadioOldPlaylistGlobal")
-	NMRadioServer.PlaylistGlobal = {}
-	for k,v in pairs(GlobalMusic) do
-		NMRadioServer.PlaylistGlobal[#NMRadioServer.PlaylistGlobal + 1] = k
-	end
+	NMRadioServer.PlaylistGlobal = NMMusic.buildUnifiedMusicKeys()
 	if #NMRadioServer.OldPlaylistGlobal == #NMRadioServer.PlaylistGlobal then
 		print("NMRadioServer: The current global music list matches old list. Old: " .. #NMRadioServer.OldPlaylistGlobal .. " New: " .. #NMRadioServer.PlaylistGlobal)
 	else
