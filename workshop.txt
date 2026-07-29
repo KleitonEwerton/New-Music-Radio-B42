@@ -1,6 +1,6 @@
 version=1
 id=3746101672
-title=New Music Radio B42
+title=New Music Radio B42 [Obsolete]
 description=[b]⚠️ EARLY ACCESS - IN DEVELOPMENT ⚠️[/b]
 description=This mod may present instability. Please report issues on GitHub.
 description=

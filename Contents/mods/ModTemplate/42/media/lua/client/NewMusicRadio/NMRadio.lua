@@ -376,9 +376,12 @@ NMRadio.PlaySound = function(number, device)
 			end
 		end
 
-		local displayName = getItemNameFromFullType(displayKey)
-		if displayName == displayKey then
-			-- getItemNameFromFullType didn't resolve it, use raw label
+		local displayName = nil
+		if string.find(displayKey, ".", 1, true) then
+			displayName = getItemNameFromFullType(displayKey)
+		end
+		if not displayName or displayName == displayKey then
+			-- getItemNameFromFullType didn't resolve it or no dot, use raw label
 			displayName = displayKey
 		end
 		local prettyName = NMRadio.prettyName(displayName)
@@ -2130,6 +2133,7 @@ function String:words()
 end
 
 NMRadio.prettyName = function(displayName)
+	if not displayName then return "" end
 	-- From True Music Jukebox written by Burryaga
 	-- Example: Cassette - Michael Cassette - My Name Is Michael Cassette
 	prettyName = displayName:gsub("Vinyl %-", "", 1) -- Remove first instance of the word Vinyl followed by a hyphen.
