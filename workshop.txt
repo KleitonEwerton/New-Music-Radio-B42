@@ -1,10 +1,10 @@
 version=1
 id=3746101672
-title=New Music Radio B42 [Obsolete]
-description=[b]⚠️ EARLY ACCESS - IN DEVELOPMENT ⚠️[/b]
-description=This mod may present instability. Please report issues on GitHub.
+title=New Music Radio B42
+description=[b]🚧 Working in B42 stable 🚧[/b]
+description=This mod may be unstable. Please report any issues on GitHub.
 description=
-description=[b]⚠️ This mod does NOT support Multiplayer. Singleplayer only. ⚠️[/b]
+description=[b]🚫 This mod does NOT support Multiplayer. Singleplayer only. 🚫[/b]
 description=
 description=[b]Description:[/b]
 description=Adds radio channels that play music from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3739256725]Talis New Music[/url] on in-game radios and TVs.
